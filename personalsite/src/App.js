@@ -37,7 +37,7 @@ function App() {
         </a>
         <a
           className="App-link"
-          href="https://drive.google.com/file/d/1sw_YJ8t9kvhsaSxlCpOgxFRW4DU_nTko/view"
+          href="https://drive.google.com/file/d/1sw_YJ8t9kvhsaSxlCpOgxFRW4DU_nTko/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
