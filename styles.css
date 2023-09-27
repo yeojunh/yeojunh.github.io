@@ -1,0 +1,98 @@
+:root {
+    --bg-color: #b3cee5;
+    --text-color: #418ed1;
+    --about-color: white;
+    --airplane-color: white;
+    --trail-color: whitesmoke;
+}
+
+body {
+    position: relative;
+    background-color: var(--bg-color);
+    font-family: Menlo, monospace;
+    text-align: center;
+    transform: translate(0, 10%);
+    color: var(--text-color);
+    max-height: 100%;
+}
+
+.main {
+    padding: 25px;
+}
+
+.about {
+    color: var(--about-color);
+}
+
+.title {
+    font-size: calc(40px + 2vmin);
+}
+
+.description {
+    margin: 0;
+}
+
+.links {
+    color: var(--text-color);
+}
+
+.links::after {
+    content: "\a";
+    white-space: pre;
+}
+
+p,
+h2,
+a {
+    font-size: calc(10px + 2vmin);
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--about-color);
+    white-space: nowrap;
+    text-align: left;
+    width: 0;
+    animation:
+        typing 1s steps(20, end) forwards,
+        blink .8s infinite;
+}
+
+.about {
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: var(--about-color)
+    }
+}
+
+.airplane-container {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.airplane-container .dot{
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--airplane-color);
+}
