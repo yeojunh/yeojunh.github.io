@@ -9,6 +9,7 @@
 
     --title-size: calc(40px + 2vmin);
     --text-size: calc(10px + 2vmin);
+    --nav-size: calc(2px + 2vmin);
 }
 
 body {
@@ -54,19 +55,17 @@ a {
 
 .navigation {
     display: flex;
-    justify-content: left;
+    justify-content: right;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 10px 0;
-    /* border-bottom: 2px solid var(--about-color); */
 }
 
 .navigation a {
     padding: 5px 15px;
     text-decoration: none; /* Remove underline from links */
     color: var(--text-color);
-    font-size: var(--text-size);
-    /* border-right: 2px solid var(--about-color); */
+    font-size: var(--nav-size);
 }
 
 .navigation a:hover {

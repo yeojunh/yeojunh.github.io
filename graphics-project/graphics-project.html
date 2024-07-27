@@ -10,9 +10,21 @@
         /* Disable scrolling */
         overflow: hidden;
       }
+      #legend {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
     </style>
   </head>
   <body>
+    <div id="legend">Use keys 1 and 2 to switch scenes.</div>
     <canvas id="webglcanvas"></canvas>
     <script type="text/javascript" src="js/dat.gui.min.js"></script>
     <script src="js/WebGL.js"></script>
