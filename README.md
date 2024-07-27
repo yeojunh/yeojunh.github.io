@@ -1,8 +1,8 @@
-# [yeojun.com](https://yeojun.com)  
+# [yeojun.com](https://yeojun.com)
 
-Made with pure HTML and CSS. No Javascript or React involved. 
+Made with HTML, CSS and Javascript.
 
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## Author
-**Yeojun Han**  
-Contact me via [LinkedIn](https://www.linkedin.com/in/yeojun/) or the email on my website!
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/yeojun
