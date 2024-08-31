@@ -3,11 +3,7 @@ import FlexBetween from "../../components/FlexBetween";
 import {
     Box, 
     IconButton, 
-    InputBase, 
     Typography, 
-    Select, 
-    MenuItem, 
-    FormControl, 
     useTheme, 
     useMediaQuery
 } from "@mui/material";
@@ -15,26 +11,30 @@ import {
     DarkMode, 
     LightMode, 
     EmojiEmotions,
-    ColorLens,
-    Help, 
     Menu, Close
 } from "@mui/icons-material"; 
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { setMode } from "../../state";
+import { useReward } from 'react-rewards';
 
 const Navbar = () => {
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const navigate = useNavigate(); 
     const dispatch = useDispatch(); 
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");  
+    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+    const { reward } = useReward('rewardId', 'confetti', {
+        angle: 180,
+        startVelocity: window.innerWidth / 40 + 5,
+        lifetime: 300
+    });  
 
     const theme = useTheme(); 
     const dark = theme.palette.neutral.dark;
     const background = theme.palette.background.default; 
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt; 
-
+    
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
             <FlexBetween gap="1.75rem">
@@ -64,9 +64,14 @@ const Navbar = () => {
                         <LightMode sx={{ color: dark, fontSize: "25px "}}/>
                         )}
                     </IconButton>
-                    <ColorLens sx={{ fontSize: "25px" }}/>
-                    <Help sx={{ fontSize: "25px" }}/>
-                    <EmojiEmotions sx={{ fontSize: "25px"}}/>
+                    {/* <IconButton onClick={() => navigate("/graphics-project")}>
+                        <Interests sx={{ fontSize: "25px"}} />
+                    </IconButton> */}
+                    {/* <Help sx={{ fontSize: "25px" }}/> */}
+                    <IconButton onClick={reward} >
+                        <span id="rewardId" />
+                        <EmojiEmotions sx={{ color: dark, fontSize: "25px"}}/>
+                    </IconButton>
                 </FlexBetween>
             ) : (
                 <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
@@ -100,24 +105,24 @@ const Navbar = () => {
                         alignItems="center" 
                         gap="3rem"
                     >
-                        <IconButton 
-                            onClick={() => dispatch(setMode())}
-                            sx={{ fontSize: "25px" }}
-                        >
-                            {theme.palette.mode === "dark" ? (
-                                <DarkMode sx={{ fontSize: "25px" }} />
-                            ) : (
-                                <LightMode sx={{ color: dark, fontSize: "25px" }} />
-                            )}
+                    <IconButton onClick={() => dispatch(setMode())}>
+                        {theme.palette.mode === "dark" ?
+                            (<DarkMode sx={{ fontSize: "25px" }}/>
+                        ) : (
+                        <LightMode sx={{ color: dark, fontSize: "25px "}}/>
+                        )}
+                    </IconButton>
+                    {/* <Interests sx={{ fontSize: "25px"}} /> */}
+                        {/* <Help sx={{ fontSize: "25px"}} /> */}
+                        <IconButton onClick={reward} >
+                            <span id="rewardId" />
+                            <EmojiEmotions sx={{ color: dark, fontSize: "25px"}}/>
                         </IconButton>
-                        <ColorLens sx={{ fontSize: "25px"}} />
-                        <Help sx={{ fontSize: "25px"}} />
-                        <EmojiEmotions sx={{ fontSize: "25px"}}/>
                     </FlexBetween>
                 </Box>
             )}
         </FlexBetween>
         )
     }
-    
+
 export default Navbar;

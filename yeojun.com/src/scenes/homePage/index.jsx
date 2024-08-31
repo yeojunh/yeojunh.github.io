@@ -1,10 +1,15 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Navbar from "../navbar";
+import UserWidget from "../widgets/UserWidget";
+import PostsWidget from "../widgets/PostsWidget";
+import NewPostWidget from "../widgets/NewPostWidget";
+import ExperiencesWidget from "../widgets/ExperiencesWidget";
+import FootnoteWidget from "../widgets/FootnoteWidget";
 
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-    const picturePath = "https://images.unsplash.com/photo-1631801803313-1a4f3b8e9d7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjI4NjN8MHwxfGFsbHwxf";
-        
+    const picturePath = "assets/yeojun.jpeg";
+    
     return (
         <Box>
             <Navbar />
@@ -16,21 +21,21 @@ const HomePage = () => {
                 justifyContent="space-between"
             >
                 <Box flexBasis={isNonMobileScreens ? "20%" : undefined}>
-                    {/* <UserWidget picturePath={picturePath} /> */}
+                    <UserWidget picturePath={picturePath} />
+                    <FootnoteWidget />
                 </Box>
                 <Box
-                    flexBasis={isNonMobileScreens ? "42%" : undefined}
+                    flexBasis={isNonMobileScreens ? "45%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    {/* <Mypostwidget></Mypostwidget> */}
-                    {/* <PostWidget></PostWidget> */}
+                    <NewPostWidget picturePath={picturePath} />
+                    <PostsWidget />
                 </Box>
 
             {/* RIGHT SIDE */}
-            {isNonMobileScreens && (
-                <Box flexBasis="26%">
-                </Box>
-            )}
+            <Box flexBasis="25%">
+                <ExperiencesWidget />
+            </Box>
             </Box>
         </Box>
     )

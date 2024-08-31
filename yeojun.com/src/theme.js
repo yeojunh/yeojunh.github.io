@@ -16,16 +16,16 @@ export const colorTokens = {
       1000: "#000000",
     },
     primary: {
-      50: "#E6FBFF",
-      100: "#CCF7FE",
-      200: "#99EEFD",
-      300: "#66E6FC",
-      400: "#33DDFB",
-      500: "#00D5FA",
-      600: "#00A0BC",
-      700: "#006B7D",
-      800: "#00353F",
-      900: "#001519",
+      50: "#E3F2FD",  // Lightest baby blue
+      100: "#BBDEFB", // Very light sky blue
+      200: "#90CAF9", // Light sky blue
+      300: "#64B5F6", // Sky blue
+      400: "#42A5F5", // Slightly darker sky blue
+      500: "#2196F3", // Standard sky blue
+      600: "#1E88E5", // Slightly darker
+      700: "#1976D2", // Darker sky blue
+      800: "#1565C0", // Even darker
+      900: "#0D47A1", // Darkest blue
     },
   };
   
@@ -39,13 +39,12 @@ export const colorTokens = {
               // palette values for dark mode
               primary: {
                 dark: colorTokens.primary[200],
-                main: colorTokens.primary[500],
+                main: colorTokens.primary[300],
                 light: colorTokens.primary[800],
               },
               neutral: {
                 dark: colorTokens.grey[100],
                 main: colorTokens.grey[200],
-                mediumMain: colorTokens.grey[300],
                 medium: colorTokens.grey[400],
                 light: colorTokens.grey[700],
               },
@@ -57,14 +56,13 @@ export const colorTokens = {
           : {
               // palette values for light mode
               primary: {
-                dark: colorTokens.primary[700],
-                main: colorTokens.primary[500],
-                light: colorTokens.primary[50],
+                dark: colorTokens.primary[600],
+                main: colorTokens.primary[400],
+                light: colorTokens.primary[200],
               },
               neutral: {
                 dark: colorTokens.grey[700],
                 main: colorTokens.grey[500],
-                mediumMain: colorTokens.grey[400],
                 medium: colorTokens.grey[300],
                 light: colorTokens.grey[50],
               },
@@ -99,7 +97,7 @@ export const colorTokens = {
         },
         h6: {
           fontFamily: ["Rubik", "sans-serif"].join(","),
-          fontSize: 14,
+          fontSize: 12,
         },
       },
     };

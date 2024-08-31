@@ -20,7 +20,7 @@ function App() {
           <CssBaseline />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="*" element={<Navigate to="/" />} /> {/* Redirect unknown routes to HomePage */}
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
