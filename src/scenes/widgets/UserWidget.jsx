@@ -68,7 +68,7 @@ const UserWidget = () => {
                         }}
                     >
                         <Link 
-                            href="https://www.linkedin.com/" 
+                            href="https://www.linkedin.com/in/yeojun/" 
                             variant="inherit" 
                             color={main}
                             target="_blank"

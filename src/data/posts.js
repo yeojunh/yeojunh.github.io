@@ -13,7 +13,7 @@ const posts = [
         title: "Microsoft Intern Hackathon Winner: WAiSTE",
         content: "Won 1st place overall and in sustainability category in the Intern Hackathon by building a recycling aid mobile app. We fine-tuned vision machine learning models to accurately categorize different types of waste using few-shot learning.",
         date: "Jul. 2023",
-        githubLink: "https://github.com/yeojunh/amplifAI",
+        githubLink: "https://github.com/emmahuang03/trash-identifier",
         picturePath: "assets/projects/waiste.png",
         iconName: "RecyclingOutlined"
     },

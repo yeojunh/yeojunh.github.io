@@ -5,7 +5,6 @@ import { useTheme } from "@emotion/react";
 import { IconButton, Typography } from "@mui/material";
 import FlexBetween from "../../components/FlexBetween";
 import { GitHub, LinkOutlined } from "@mui/icons-material";
-import { Link } from "react-router-dom";
 
 const PostWidget = ({ 
     title, 
@@ -63,18 +62,18 @@ const PostWidget = ({
                     {githubLink && (
                         <FlexBetween gap="0.3rem">
                             <IconButton>
-                                <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                                <a href={githubLink} target="_blank" rel="noopener noreferrer">
                                     <GitHub sx={{ color: dark }}/>  
-                                </Link>
+                                </a>
                             </IconButton>
                         </FlexBetween>
                     )}
                     {projectLink && (
                         <FlexBetween gap="0.3rem">
                             <IconButton>
-                                <Link href={projectLink} target="_blank" rel="noopener noreferrer">
+                                <a href={projectLink} target="_blank" rel="noopener noreferrer">
                                     <LinkOutlined sx={{ color: dark }}/>  
-                                </Link>
+                                </a>
                             </IconButton>
                         </FlexBetween>
                     )}

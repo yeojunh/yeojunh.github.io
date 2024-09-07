@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material"
 import { useTheme } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const FootnoteWidget = () => {
     const { palette } = useTheme(); 
@@ -11,13 +10,13 @@ const FootnoteWidget = () => {
             <Typography color={medium} variant="h6" sx={{ m: "0.5rem 1rem", wordBreak: "break-word" }}>
                 This website is built with React, Material-UI, and GitHub Pages. 
                 The source code is available on{" "}
-                <Link 
+                <a 
                     href="https://github.com/yeojunh/yeojunh.github.io" 
                     target="_blank" rel="noopener noreferrer"                       
                     style={{ color: medium }}
                 >
                     GitHub
-                </Link>
+                </a>
                 .
             </Typography>
         </div>
