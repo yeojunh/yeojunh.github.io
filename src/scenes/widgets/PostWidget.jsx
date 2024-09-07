@@ -49,6 +49,7 @@ const PostWidget = ({
                         display: 'block', 
                         margin: 'auto', 
                         maxHeight: '500px', 
+                        maxWidth: '100%',
                         borderRadius: '0.75rem', 
                         objectFit: 'contain' 
                     }}
