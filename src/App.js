@@ -1,7 +1,6 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import './App.css';
 import HomePage from './scenes/homePage';
-import ProfilePage from './scenes/profilePage';
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import { useMemo } from "react";
