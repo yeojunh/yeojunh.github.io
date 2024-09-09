@@ -87,32 +87,30 @@ const Navbar = () => {
                     bottom="0"
                     height="100%"
                     zIndex="10"
-                    width="75px"
+                    width="10%"
                     backgroundColor={background}
                 >
-                    {/* CLOSE ICON */}
-                    <Box display="flex" justifyContent="flex-end" p="1rem">
-                        <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
-                            <Close />
-                        </IconButton>
-                    </Box>
-
                     {/* MENU ITEMS */}
                     <FlexBetween 
+                        mt="2rem"
                         display="flex" 
                         flexDirection="column" 
                         justifyContent="center" 
                         alignItems="center" 
                         gap="3rem"
                     >
-                    <IconButton onClick={() => dispatch(setMode())}>
-                        {theme.palette.mode === "dark" ?
-                            (<DarkMode sx={{ fontSize: "25px" }}/>
-                        ) : (
-                        <LightMode sx={{ color: dark, fontSize: "25px "}}/>
-                        )}
-                    </IconButton>
-                    {/* <Interests sx={{ fontSize: "25px"}} /> */}
+                        <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
+                            <Close />
+                        </IconButton>
+
+                        <IconButton onClick={() => dispatch(setMode())}>
+                            {theme.palette.mode === "dark" ?
+                                (<DarkMode sx={{ fontSize: "25px" }}/>
+                            ) : (
+                            <LightMode sx={{ color: dark, fontSize: "25px "}}/>
+                            )}
+                        </IconButton>
+                        {/* <Interests sx={{ fontSize: "25px"}} /> */}
                         {/* <Help sx={{ fontSize: "25px"}} /> */}
                         <IconButton onClick={reward} >
                             <span id="rewardId" />

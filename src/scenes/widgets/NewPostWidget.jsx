@@ -21,7 +21,7 @@ const NewPostWidget = () => {
                         width: "100%",
                         backgroundColor: light,
                         borderRadius: "2rem",
-                        padding: "1rem 2rem"
+                        padding: "1rem 1.5rem"
                     }}
                 >
                     <Typewriter 

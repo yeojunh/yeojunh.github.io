@@ -20,22 +20,43 @@ const HomePage = () => {
                 gap="0.5rem"
                 justifyContent="space-between"
             >
-                <Box flexBasis={isNonMobileScreens ? "20%" : undefined}>
+                {/* LEFT SIDE */}
+                <Box flexBasis={isNonMobileScreens ? "23%" : undefined}>
                     <UserWidget picturePath={picturePath} />
                     <FootnoteWidget />
                 </Box>
-                <Box
-                    flexBasis={isNonMobileScreens ? "45%" : undefined}
-                    mt={isNonMobileScreens ? undefined : "2rem"}
-                >
-                    <NewPostWidget picturePath={picturePath} />
-                    <PostsWidget />
-                </Box>
 
-            {/* RIGHT SIDE */}
-            <Box flexBasis="25%">
-                <ExperiencesWidget />
-            </Box>
+                {isNonMobileScreens ? (
+                    // DESKTOP 
+                    <>
+                        <Box flexBasis="45%" >
+                            <NewPostWidget picturePath={picturePath} />
+                            <PostsWidget />
+                        </Box>
+
+                        <Box flexBasis="25%">
+                            <ExperiencesWidget />
+                        </Box>
+                    </>
+                ) : (
+                    // MOBILE 
+                    <>
+                        <Box 
+                            flexBasis="25%"
+                            mt="2rem"    
+                        >
+                            <NewPostWidget picturePath={picturePath} />
+                        </Box>
+
+                        <Box
+                            mt="2rem"
+                        >
+                            <ExperiencesWidget />
+                            <PostsWidget />
+                        </Box>
+                    </>
+                )
+                } 
             </Box>
         </Box>
     )

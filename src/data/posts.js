@@ -30,7 +30,7 @@ const posts = [
     {
         postId: 4, 
         title: "Typing Application",
-        content: "This was one of my first projects. I created a typing practice application that measures the user's typing speed and accuracy. The user will be able to track their previous typing test records for typing speed and accuracy. The typing speed will be calculated in words per minute (wpm), and accuracy will be based on the percentage of words typed correctly.\n\nIt featured quotes from our favourite CS prof, Gregor!",
+        content: "This was one of my first projects. I created a typing practice application that measures the user's typing speed and accuracy. The user will be able to track their previous typing test records for typing speed and accuracy. The typing speed will be calculated in words per minute (wpm), and accuracy will be based on the percentage of words typed correctly.",
         date: "Jul. 2021",
         githubLink: "https://github.com/yeojunh/TypingApplication",
         projectLink: "https://www.youtube.com/watch?v=YOEfrQMywzY",

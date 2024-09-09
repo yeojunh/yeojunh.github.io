@@ -7,12 +7,14 @@ const ExperienceWidget = ({
     startDate, 
     endDate, 
     description,
+    website,
     picturePath,
     size = "150px"
 }) => {
     const { palette } = useTheme(); 
     const main = palette.neutral.main;
     const medium = palette.neutral.medium;
+    const primaryDark = palette.primary.dark;
 
     const formattedStartDate = startDate.replace(/ /g, '\u00A0');
     const formattedEndDate = endDate.replace(/ /g, '\u00A0');
@@ -24,11 +26,21 @@ const ExperienceWidget = ({
                 height="auto"
                 alt="logo"
                 src={picturePath}
-                style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
+                style={{ marginLeft: "auto", marginRight: "auto", display: "block", cursor: "pointer" }}
+                onClick={() => window.open(website, "_blank")}
             />
             <Box pb="0.5rem" />
             <FlexBetween >
-                <Typography color={main}>
+                <Typography 
+                    color={main} 
+                    sx={{
+                        "&:hover": {
+                            color: primaryDark, 
+                            cursor: "pointer",
+                        },
+                    }}
+                    onClick={() => window.open(website, "_blank")}
+                >
                     {title}
                 </Typography>
                 <Typography color={medium} sx={{ textAlign: "left" }}>

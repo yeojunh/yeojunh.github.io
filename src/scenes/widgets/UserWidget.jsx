@@ -117,12 +117,12 @@ const UserWidget = () => {
                         }}
                     >
                         <Link 
-                            href="mailto:yeojunh@student.ubc.ca" 
+                            href="mailto:hello@yeojun.com" 
                             variant="inherit" 
                             color={main}
                             target="_blank"
                         >
-                            Email
+                            hello@yeojun.com
                         </Link>
                     </Typography>
                 </Box>

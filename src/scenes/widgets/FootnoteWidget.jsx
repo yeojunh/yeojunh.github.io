@@ -8,7 +8,7 @@ const FootnoteWidget = () => {
     return (
         <div>
             <Typography color={medium} variant="h6" sx={{ m: "0.5rem 1rem", wordBreak: "break-word" }}>
-                This website is built with React, Material-UI, and GitHub Pages. 
+                This website is built with React and GitHub Pages. 
                 The source code is available on{" "}
                 <a 
                     href="https://github.com/yeojunh/yeojunh.github.io" 
