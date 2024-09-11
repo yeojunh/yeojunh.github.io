@@ -13,6 +13,7 @@ const PostWidget = ({
     githubLink,
     projectLink,
     picturePath,
+    embedPath,
     iconName
 }) => {
     const { palette } = useTheme(); 
@@ -55,6 +56,20 @@ const PostWidget = ({
                     }}
                     src={`${picturePath}`}
                     onLoad={handleImageLoad}
+                />
+            )}
+            {embedPath && (
+                <iframe
+                    src={embedPath}
+                    style={{
+                        display: 'block',
+                        margin: 'auto',
+                        border: 'none',
+                        width: '100%',
+                        height: '400px',
+                        borderRadius: '0.75rem'
+                    }}
+                    title="Three.js 3D Graphics"
                 />
             )}
             <FlexBetween mt="0.25rem">

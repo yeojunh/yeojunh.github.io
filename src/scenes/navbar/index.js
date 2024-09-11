@@ -64,10 +64,6 @@ const Navbar = () => {
                         <LightMode sx={{ color: dark, fontSize: "25px "}}/>
                         )}
                     </IconButton>
-                    {/* <IconButton onClick={() => navigate("/graphics-project")}>
-                        <Interests sx={{ fontSize: "25px"}} />
-                    </IconButton> */}
-                    {/* <Help sx={{ fontSize: "25px" }}/> */}
                     <IconButton onClick={reward} >
                         <span id="rewardId" />
                         <EmojiEmotions sx={{ color: dark, fontSize: "25px"}}/>
@@ -110,8 +106,6 @@ const Navbar = () => {
                             <LightMode sx={{ color: dark, fontSize: "25px "}}/>
                             )}
                         </IconButton>
-                        {/* <Interests sx={{ fontSize: "25px"}} /> */}
-                        {/* <Help sx={{ fontSize: "25px"}} /> */}
                         <IconButton onClick={reward} >
                             <span id="rewardId" />
                             <EmojiEmotions sx={{ color: dark, fontSize: "25px"}}/>

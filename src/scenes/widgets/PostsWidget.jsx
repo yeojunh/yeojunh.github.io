@@ -6,24 +6,24 @@ const PostsWidget = () => {
         <>
             {posts.map(
                 ({
-                    postId,
                     title,
                     content,
                     date,
                     githubLink,
                     projectLink,
                     picturePath,
+                    embedPath,
                     iconName
-                }) => (
+                }, index) => (
                     <PostWidget 
-                        key={postId}
-                        postId={postId}
+                        key={index}
                         title={title}
                         content={content}
                         date={date}
                         githubLink={githubLink}
                         projectLink={projectLink}
                         picturePath={picturePath}
+                        embedPath={embedPath}
                         iconName={iconName}
                     />
                 )

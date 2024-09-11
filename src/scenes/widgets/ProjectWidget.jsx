@@ -27,7 +27,7 @@ const ProjectWidget = ({ title, subtitle, iconName }) => {
                 {IconComponent && <IconComponent sx={{ color: main }} />}
             </FlexBetween>
             <FlexBetween>
-                <Typography color={medium} fontSize="0.75rem">
+                <Typography pt="0.1rem" color={medium} fontSize="0.75rem">
                     {subtitle}
                 </Typography>
             </FlexBetween>

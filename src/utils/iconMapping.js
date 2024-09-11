@@ -3,6 +3,8 @@ import {
     RecyclingOutlined,
     HearingOutlined,
     KeyboardOutlined,
+    DrawOutlined,
+    SportsEsportsOutlined,
   } from "@mui/icons-material";
   
   const iconMapping = {
@@ -10,6 +12,8 @@ import {
     RecyclingOutlined,
     HearingOutlined,
     KeyboardOutlined,
+    DrawOutlined,
+    SportsEsportsOutlined,
   };
   
   export default iconMapping;
