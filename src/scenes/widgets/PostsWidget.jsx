@@ -11,7 +11,7 @@ const PostsWidget = () => {
                     date,
                     githubLink,
                     projectLink,
-                    picturePath,
+                    picturePaths,
                     embedPath,
                     iconName
                 }, index) => (
@@ -22,7 +22,7 @@ const PostsWidget = () => {
                         date={date}
                         githubLink={githubLink}
                         projectLink={projectLink}
-                        picturePath={picturePath}
+                        picturePaths={picturePaths}
                         embedPath={embedPath}
                         iconName={iconName}
                     />

@@ -5,6 +5,7 @@ import {
     KeyboardOutlined,
     DrawOutlined,
     SportsEsportsOutlined,
+    FactCheckOutlined,
   } from "@mui/icons-material";
   
   const iconMapping = {
@@ -14,6 +15,7 @@ import {
     KeyboardOutlined,
     DrawOutlined,
     SportsEsportsOutlined,
+    FactCheckOutlined,
   };
   
   export default iconMapping;
