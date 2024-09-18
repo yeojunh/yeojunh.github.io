@@ -9,7 +9,6 @@ import iconMapping from "../../utils/iconMapping";
 const PostWidget = ({ 
     title, 
     content, 
-    date, 
     githubLink,
     projectLink,
     picturePaths,
@@ -63,7 +62,7 @@ const PostWidget = ({
                     <Box>
                     <Typography
                         color={dark}
-                        variant="h4"
+                        variant="h3"
                         fontWeight="500"
                     >
                         {title}
@@ -71,19 +70,13 @@ const PostWidget = ({
                     </Box>
                     {IconComponent && 
                         (
- <a href={projectLink ? projectLink : githubLink} target="_blank" rel="noopener noreferrer">
+                            <a href={projectLink ? projectLink : githubLink} target="_blank" rel="noopener noreferrer">
                                 <IconComponent sx={{ color: primary }} />
                             </a>
                         )
                     }
                 </FlexBetween>
-                <FlexBetween>
-                    <Typography pt="0.1rem" color={medium} fontSize="0.75rem">
-                        {date}
-                    </Typography>
-                </FlexBetween>
             </Box>
-
             <Typography color={main} sx={{ m: "1rem 0", wordBreak: "break-word" }}>
                 {content.split('\n').map((line, index) => (
                     <React.Fragment key={index}>

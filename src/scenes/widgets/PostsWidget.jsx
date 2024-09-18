@@ -8,7 +8,6 @@ const PostsWidget = () => {
                 ({
                     title,
                     content,
-                    date,
                     githubLink,
                     projectLink,
                     picturePaths,
@@ -19,7 +18,6 @@ const PostsWidget = () => {
                         key={index}
                         title={title}
                         content={content}
-                        date={date}
                         githubLink={githubLink}
                         projectLink={projectLink}
                         picturePaths={picturePaths}
