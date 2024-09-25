@@ -1,42 +1,33 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../components/FlexBetween";
 import {
-    Box, 
-    IconButton, 
-    Typography, 
-    useTheme, 
+    Box,
+    IconButton,
+    Typography,
+    useTheme,
     useMediaQuery
 } from "@mui/material";
 import { 
-    DarkMode, 
-    LightMode, 
-    EmojiEmotions,
-    Menu, Close
-} from "@mui/icons-material"; 
-import { useDispatch } from "react-redux";
+    Menu,
+    Close,
+} from "@mui/icons-material";
 import { useState } from "react";
-import { setMode } from "../../state";
-import { useReward } from 'react-rewards';
+import ThemeSwitchButton from "./navItems/ThemeSwitchButton";
+import ConfettiButton from "./navItems/ConfettiButton";
 
 const Navbar = () => {
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const navigate = useNavigate(); 
-    const dispatch = useDispatch(); 
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
-    const { reward } = useReward('rewardId', 'confetti', {
-        angle: 180,
-        startVelocity: window.innerWidth / 40 + 5,
-        lifetime: 300
-    });  
 
-    const theme = useTheme(); 
-    const dark = theme.palette.neutral.dark;
-    const background = theme.palette.background.default; 
+    const theme = useTheme();
+    const background = theme.palette.background.default;
     const primaryLight = theme.palette.primary.light;
-    const alt = theme.palette.background.alt; 
-    
+    const alt = theme.palette.background.alt;
+
     return (
-        <FlexBetween padding="1rem 6%" backgroundColor={alt}>
+        <FlexBetween padding="1rem 11%" backgroundColor={alt}>
             <FlexBetween gap="1.75rem">
                 <Typography
                     fontWeight="bold"
@@ -45,7 +36,7 @@ const Navbar = () => {
                     onClick={() => navigate("/")}
                     sx={{
                         "&:hover": {
-                            color: primaryLight, 
+                            color: primaryLight,
                             cursor: "pointer",
                         },
                     }}
@@ -57,17 +48,9 @@ const Navbar = () => {
             {/* DESKTOP NAV */}
             {isNonMobileScreens ? (
                 <FlexBetween gap="2rem">
-                    <IconButton onClick={() => dispatch(setMode())}>
-                        {theme.palette.mode === "dark" ?
-                            (<DarkMode sx={{ fontSize: "25px" }}/>
-                        ) : (
-                        <LightMode sx={{ color: dark, fontSize: "25px "}}/>
-                        )}
-                    </IconButton>
-                    <IconButton onClick={reward} >
-                        <span id="rewardId" />
-                        <EmojiEmotions sx={{ color: dark, fontSize: "25px"}}/>
-                    </IconButton>
+                    <ThemeSwitchButton />
+                    {/* <FeatureFlagButton /> */}
+                    <ConfettiButton />
                 </FlexBetween>
             ) : (
                 <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
@@ -98,18 +81,9 @@ const Navbar = () => {
                         <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
                             <Close />
                         </IconButton>
-
-                        <IconButton onClick={() => dispatch(setMode())}>
-                            {theme.palette.mode === "dark" ?
-                                (<DarkMode sx={{ fontSize: "25px" }}/>
-                            ) : (
-                            <LightMode sx={{ color: dark, fontSize: "25px "}}/>
-                            )}
-                        </IconButton>
-                        <IconButton onClick={reward} >
-                            <span id="rewardId" />
-                            <EmojiEmotions sx={{ color: dark, fontSize: "25px"}}/>
-                        </IconButton>
+                        <ThemeSwitchButton />
+                        {/* <FeatureFlagButton /> */}
+                        <ConfettiButton />
                     </FlexBetween>
                 </Box>
             )}

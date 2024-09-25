@@ -1,4 +1,4 @@
-const posts = [    
+const posts = [
     {
         title: "Adversarial Attacks in Image Classification Models",
         content: "This paper explores the vulnerability of Convolutional Neural Networks (CNNs) and Deep Neural Networks (DNNs) to adversarial attacks using CIFAR-10 images.",

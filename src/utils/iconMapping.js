@@ -7,7 +7,7 @@ import {
     SportsEsportsOutlined,
     FactCheckOutlined,
   } from "@mui/icons-material";
-  
+
   const iconMapping = {
     SmartToyOutlined,
     RecyclingOutlined,
@@ -17,5 +17,5 @@ import {
     SportsEsportsOutlined,
     FactCheckOutlined,
   };
-  
+
   export default iconMapping;
