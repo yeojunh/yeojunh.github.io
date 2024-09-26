@@ -6,7 +6,6 @@ import { Box, useTheme, Typography, Divider, Link } from "@mui/material";
 import {
   GitHub,
   LinkedIn,
-  EmailRounded,
   LocationOnSharp,
   SchoolRounded,
   WorkRounded,
@@ -78,7 +77,7 @@ const UserWidget = () => {
             </Link>
           </Typography>
         </Box>
-        <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
+        <Box display="flex" alignItems="center" gap="1rem">
           <GitHub fontSize="large" sx={{ color: main }} />
           <Typography
             color={medium}
@@ -96,34 +95,6 @@ const UserWidget = () => {
               target="_blank"
             >
               GitHub
-            </Link>
-          </Typography>
-        </Box>
-      </Box>
-      <Divider />
-      {/* FOURTH ROW */}
-      <Box p="1rem 0">
-        <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
-          Contact
-        </Typography>
-        <Box display="flex" alignItems="center" gap="1rem">
-          <EmailRounded fontSize="large" sx={{ color: main }} />
-          <Typography
-            color={medium}
-            sx={{
-              "&:hover": {
-                color: palette.primary.light,
-                cursor: "pointer",
-              },
-            }}
-          >
-            <Link
-              href="mailto:hello@yeojun.com"
-              variant="inherit"
-              color={main}
-              target="_blank"
-            >
-              hello@yeojun.com
             </Link>
           </Typography>
         </Box>
