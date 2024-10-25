@@ -7,12 +7,20 @@ const posts = [
         iconName: "SmartToyOutlined"
     },
     {
-        title: "Hack the North 2024: Actually",
-        content: "Actually helps you stay informed by fact checking your content in real time. Give it a video or livestream of a debate, and Actually will provide real-time fact checking and context to help you understand the truth behind the words.",
+        title: "Real-time Livestream Fact Checker: Actually",
+        content: "Actually helps you stay informed by fact checking your content in real-time. Give it a video or livestream of a debate, and Actually will transcribe, provide more context on the topic, analyze claims, and deliver instant fact-checks with citations through a React interface.\n\nI engineered the core AI pipeline, connecting Azure speech recognition model with fine-tuned Gemini 1.5 Pro prompts to generate structured fact-check results ready for citation processing.",
         githubLink: "https://github.com/ArsalaanAli/Eavesdrop",
         projectLink: "https://devpost.com/software/aktually",
         picturePaths: ["assets/projects/actually_logo.jpg", "assets/projects/actually.jpg"],
         iconName: "FactCheckOutlined"
+    },
+    {
+        title: "Smart Kitchen Monitor: Dishwatcher",
+        content: "You move out of your parents home and you realize that the dishes don’t clean themselves. Unfortunately, some of our roommates haven’t come to that conclusion yet. If only there was a way to track who leaves dishes and who cleans them up...\n\nOn the technical side, I developed the Python/Flask backend and engineered the computer vision components. By combining OpenCV and YOLO models with a prediction buffer, I developed reliable face and dish detection despite varying lighting and occlusion.",
+        githubLink: "https://github.com/Lciappi/dishwatcher",
+        projectLink: "https://devpost.com/software/dishwatcher",
+        picturePaths: ["assets/projects/dishwatcher_logo.png", "assets/projects/dishwatcher_page.jpg"],
+        iconName: "CountertopsOutlined"
     },
     {
         title: "Microsoft Intern Hackathon Winner: WAiSTE",

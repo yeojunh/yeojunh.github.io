@@ -6,6 +6,7 @@ import {
     DrawOutlined,
     SportsEsportsOutlined,
     FactCheckOutlined,
+    CountertopsOutlined,
   } from "@mui/icons-material";
 
   const iconMapping = {
@@ -16,6 +17,7 @@ import {
     DrawOutlined,
     SportsEsportsOutlined,
     FactCheckOutlined,
+    CountertopsOutlined
   };
 
   export default iconMapping;

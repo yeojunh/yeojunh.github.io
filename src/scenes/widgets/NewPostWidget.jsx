@@ -1,7 +1,6 @@
 import React from "react";
 import WidgetWrapper from "../../components/WidgetWrapper";
 import { useTheme } from "@emotion/react";
-import { Typewriter } from "react-simple-typewriter";
 import { Box, Typography } from "@mui/material";
 import UserImage from "../../components/UserImage";
 import FlexBetween from "../../components/FlexBetween";
@@ -14,7 +13,7 @@ const NewPostWidget = () => {
   return (
     <WidgetWrapper>
       <Typography variant="h5" sx={{ color: dark }}>
-        About me
+        Currently working on...
       </Typography>
       <FlexBetween>
         <UserImage size="40px" />
@@ -27,12 +26,10 @@ const NewPostWidget = () => {
             padding: "1rem 1.5rem",
           }}
         >
-          <Typewriter
-            words={["ubc computer science", "swe & ml enthusiast"]}
-            loop={0}
-            cursor={true}
-            cursorBlinking={true}
-          />
+          <Typography sx={{ color: dark }}>
+            - Godot game development <br />
+            - Computer vision models <br />
+          </Typography>
         </Box>
       </FlexBetween>
     </WidgetWrapper>

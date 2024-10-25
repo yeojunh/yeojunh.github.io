@@ -13,8 +13,7 @@ const FootnoteWidget = () => {
         variant="h6"
         sx={{ m: "0.5rem 1rem", wordBreak: "break-word" }}
       >
-        This website is built with React and GitHub Pages. The source code is
-        available on{" "}
+        The source code is available on{" "}
         <a
           href="https://github.com/yeojunh/yeojunh.github.io"
           target="_blank"

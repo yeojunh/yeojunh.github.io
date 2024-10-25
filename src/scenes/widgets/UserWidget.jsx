@@ -4,10 +4,13 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import UserImage from "../../components/UserImage";
 import { Box, useTheme, Typography, Divider, Link } from "@mui/material";
 import {
+  BakeryDining,
   GitHub,
   LinkedIn,
   LocationOnSharp,
   SchoolRounded,
+  SportsEsports,
+  SportsSoccer,
   WorkRounded,
 } from "@mui/icons-material";
 
@@ -55,7 +58,6 @@ const UserWidget = () => {
         <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
           Profiles
         </Typography>
-
         <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
           <LinkedIn fontSize="large" sx={{ color: main }} />
           <Typography
@@ -77,7 +79,7 @@ const UserWidget = () => {
             </Link>
           </Typography>
         </Box>
-        <Box display="flex" alignItems="center" gap="1rem">
+        <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
           <GitHub fontSize="large" sx={{ color: main }} />
           <Typography
             color={medium}
@@ -97,6 +99,26 @@ const UserWidget = () => {
               GitHub
             </Link>
           </Typography>
+        </Box>
+      </Box>
+
+      <Divider />
+      {/* FOURTH ROW */}
+      <Box p="1rem 0">
+        <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
+          Hobbies
+        </Typography>
+        <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
+          <SportsSoccer fontSize="large" sx={{ color: main }} />
+          <Typography color={main}>Ex-AA soccer player :&apos;)</Typography>
+        </Box>
+        <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
+          <SportsEsports fontSize="large" sx={{ color: main }} />
+          <Typography color={main}>Not-so-professional gamer</Typography>
+        </Box>
+        <Box display="flex" alignItems="center" gap="1rem" mb="-0.5rem">
+          <BakeryDining fontSize="large" sx={{ color: main }} />
+          <Typography color={main}>Started baking recently!</Typography>
         </Box>
       </Box>
     </WidgetWrapper>
