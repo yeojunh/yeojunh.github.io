@@ -2,7 +2,7 @@ const experiences = [
     {
         "title": "Ansys OpticStudio",
         "startDate": "Sep. 2024",
-        "endDate": "Present",
+        "endDate": "Dec. 2024",
         "description": "SWE Intern",
         "website": "https://www.ansys.com/products/optics/ansys-zemax-opticstudio",
         "picturePath": "assets/logos/ansys-white.png",

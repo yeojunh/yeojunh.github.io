@@ -27,8 +27,8 @@ const NewPostWidget = () => {
           }}
         >
           <Typography sx={{ color: dark }}>
+            - Full stack web + extension app <br />
             - Godot game development <br />
-            - Computer vision models <br />
           </Typography>
         </Box>
       </FlexBetween>
