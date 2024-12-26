@@ -13,10 +13,12 @@ const NewPostWidget = () => {
   return (
     <WidgetWrapper>
       <Typography variant="h5" sx={{ color: dark }}>
-        Currently working on...
+        About me
       </Typography>
-      <FlexBetween>
-        <UserImage size="40px" />
+      <FlexBetween style={{ alignItems: "flex-start" }}>
+        <Box style={{ marginTop: "1.25rem" }}>
+          <UserImage size="40px" />
+        </Box>
         <Box
           margin="1rem"
           sx={{
@@ -27,8 +29,16 @@ const NewPostWidget = () => {
           }}
         >
           <Typography sx={{ color: dark }}>
-            - Full stack web + extension app <br />
-            - Godot game development <br />
+            Hi, I&apos;m Yeojun (&quot;yuh-jun&quot;) and I&apos;m a 5th year
+            Computer Science student at the University of British Columbia.
+            I&apos;m interested in computer vision, applications of ML, and
+            developer tools. I&apos;ve previously worked on both internal and
+            customer-facing developer tools at Microsoft and Ansys.
+            <br />
+            <br />
+            When I&apos;m not coding, I like to travel ✈️, watch the sunset 🌅,
+            and go surfing 🏄‍♀️. Bonus points for surfing during sunset while on
+            vacation.
           </Typography>
         </Box>
       </FlexBetween>
