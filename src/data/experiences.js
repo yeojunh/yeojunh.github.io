@@ -1,5 +1,23 @@
 const experiences = [
     {
+        "title": "Undergraduate Teaching Assistant",
+        "startDate": "Jan. 2021",
+        "endDate": "Apr. 2025",
+        "description": "CPSC 210 Software Construction\nCPSC 330 Applied Machine Learning\nCPSC 425 Computer Vision",
+        "website": "https://ubc-cs.github.io/cpsc330-2023W1/syllabus.html",
+        "picturePath": "assets/logos/ubc-white.png",
+        "altPicturePath": "assets/logos/ubc-blue.png"
+    },
+    {
+        "title": "Undergraduate Research Assistant",
+        "startDate": "Jan. 2025",
+        "endDate": "Apr. 2025",
+        "description": "SOCIUS Lab: Human-Computer Interaction (HCI) research",
+        "website": "https://www.cs.ubc.ca/labs/socius/",
+        "picturePath": "assets/logos/ubc-white.png",
+        "altPicturePath": "assets/logos/ubc-blue.png"
+    },
+    {
         "title": "Ansys OpticStudio",
         "startDate": "Sep. 2024",
         "endDate": "Dec. 2024",
@@ -35,15 +53,6 @@ const experiences = [
         "picturePath": "assets/logos/microsoft.png",
         "altPicturePath": "assets/logos/microsoft.png"
     },
-    {
-        "title": "Undergraduate Teaching Assistant",
-        "startDate": "Jan. 2021",
-        "endDate": "Apr. 2024",
-        "description": "CPSC 210 Software Construction\nCPSC 330 Applied Machine Learning",
-        "website": "https://ubc-cs.github.io/cpsc330-2023W1/syllabus.html",
-        "picturePath": "assets/logos/ubc-white.png",
-        "altPicturePath": "assets/logos/ubc-blue.png"
-    }
 ];
 
 export default experiences;
