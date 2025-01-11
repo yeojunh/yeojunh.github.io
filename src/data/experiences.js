@@ -3,7 +3,7 @@ const experiences = [
         "title": "Undergraduate Teaching Assistant",
         "startDate": "Jan. 2021",
         "endDate": "Apr. 2025",
-        "description": "CPSC 210 Software Construction\nCPSC 330 Applied Machine Learning\nCPSC 425 Computer Vision",
+        "description": "CPSC 425 Computer Vision\nCPSC 330 Applied Machine Learning\nCPSC 210 Software Construction",
         "website": "https://ubc-cs.github.io/cpsc330-2023W1/syllabus.html",
         "picturePath": "assets/logos/ubc-white.png",
         "altPicturePath": "assets/logos/ubc-blue.png"
