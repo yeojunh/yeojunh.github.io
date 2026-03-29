@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+  --accent: #3b82f6;
+  --accent-muted: rgba(59, 130, 246, 0.08);
+  --muted: #737373;
+  --muted-foreground: #a3a3a3;
+  --border: rgba(0, 0, 0, 0.08);
+  --card-bg: #ffffff;
+  --glow-opacity: 0.05;
+  --glow-visible: 0;
+}
+
+.dark {
+  --background: #0a0a0b;
+  --foreground: #fafafa;
+  --accent: #3b82f6;
+  --accent-muted: rgba(59, 130, 246, 0.12);
+  --muted: #a3a3a3;
+  --muted-foreground: #737373;
+  --border: rgba(255, 255, 255, 0.08);
+  --card-bg: #141415;
+  --glow-opacity: 0.2;
+  --glow-visible: 1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* Scroll indicator bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(5px) translateX(-50%); }
+}
+
+/* Section anchor offset for fixed navbar */
+section[id] {
+  scroll-margin-top: 80px;
+}
