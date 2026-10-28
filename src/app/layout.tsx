@@ -1,27 +1,25 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+
 export const metadata: Metadata = {
-  title: "yeojun.com",
+  title: "Yeojun Han",
   description:
-    "Personal website of Yeojun Han",
+    "Yeojun Han. Software Engineer II working on AI tooling at Microsoft.",
   icons: {
     icon: "/assets/website-icon.png",
     apple: "/assets/website-icon.png",
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#c5e1f4",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased">
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
