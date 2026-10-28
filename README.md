@@ -1,16 +1,19 @@
 # yeojun.com
 
-Personal website of Yeojun Han — Software Engineer focused on AI Tooling.
+Welcome to my personal website! Here you can learn a bit more about me, my experiences, and hobbies.
 
-Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Statically exported and deployed to GitHub Pages.
+Built with Next.js, React, TypeScript, and CSS modules. The sky animation uses
+`requestAnimationFrame`, respects reduced-motion preferences, and has a pause
+control in the footer.
 
 ## Development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Deploy
+## Deployment
 
-Pushes to `main` automatically deploy via GitHub Actions.
+`npm run build` statically exports the site to `out`. Pushes to `main` deploy it
+to GitHub Pages through GitHub Actions.

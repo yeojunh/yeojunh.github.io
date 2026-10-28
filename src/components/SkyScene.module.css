@@ -1,0 +1,170 @@
+.scene {
+  --ink: #171717;
+  --muted: var(--ink);
+  --art: #ffffff;
+  --sky: #c5e1f4;
+  --text-size: 13px;
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  color: var(--ink);
+  background: var(--sky);
+  font: var(--text-size)/1.95 Consolas, "Liberation Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+.scene ::selection {
+  color: var(--ink);
+  background: #edf5f5;
+}
+
+.scene a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #52768f70;
+  text-underline-offset: 4px;
+}
+
+.scene a:hover,
+.scene button:hover {
+  text-decoration-color: currentColor;
+}
+
+.scene a:focus-visible,
+.scene button:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 5px;
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(165deg, #beddf3, #cee5f5 65%, #d7eaf6);
+}
+
+.cloud {
+  position: absolute;
+  margin: 0;
+  color: var(--art);
+  font: var(--text-size)/1.2 Consolas, "Liberation Mono", monospace;
+  white-space: pre;
+  user-select: none;
+  animation: cloud-drift 85s ease-in-out infinite alternate;
+}
+
+.cloudOne { top: 9%; left: 7%; }
+.cloudTwo { top: 54%; right: -25px; animation-delay: -45s; }
+.cloudThree { bottom: 20%; left: 12%; animation-delay: -20s; }
+
+@keyframes cloud-drift {
+  from { transform: translateX(-22px); }
+  to { transform: translateX(30px); }
+}
+
+.aircraft,
+.bird,
+.trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: var(--art);
+  white-space: pre;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: var(--text-size);
+  font-weight: 400;
+  line-height: 1.05;
+  user-select: none;
+  will-change: transform;
+}
+
+.aircraft { font-family: "Segoe UI Symbol", "Apple Symbols", sans-serif; }
+.trail { margin-top: -.3em; }
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: min(530px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+.content header {
+  min-height: 86svh;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content h1 {
+  font: 500 25px/1.4 Consolas, "Liberation Mono", monospace;
+  margin: 0 0 17px;
+  letter-spacing: -.04em;
+}
+
+.content header p {
+  max-width: 440px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.content section { margin-bottom: 65px; }
+
+.content h2 {
+  font: 600 var(--text-size)/1.7 Consolas, "Liberation Mono", monospace;
+  margin: 0 0 20px;
+}
+
+.content p { margin: 0 0 17px; }
+.content section p { color: var(--muted); }
+.content ul { list-style: none; padding: 0; margin: 0; }
+.content li { margin-bottom: 24px; }
+.content li p { margin: 4px 0 0; }
+.content dl { margin: 0; }
+
+.content dl > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 24px;
+  margin: 0 0 19px;
+}
+
+.content dt { margin: 0; }
+.content dd { margin: 0; color: var(--muted); }
+.content dd + dd { grid-column: 1 / -1; }
+.content footer { display: flex; flex-wrap: wrap; gap: 25px; padding: 0 0 70px; }
+
+.content button {
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  background: none;
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-color: #52768f70;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.paused .cloud { animation-play-state: paused; }
+
+@media (max-width: 600px) {
+  .scene { --text-size: 12px; }
+  .content { width: calc(100% - 56px); }
+  .content header { min-height: 80svh; }
+  .content h1 { font-size: 23px; }
+  .cloudOne { left: -65px; }
+  .cloudTwo { right: -80px; }
+  .cloudThree { left: -32px; }
+  .content dl > div { column-gap: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud { animation: none; }
+}
