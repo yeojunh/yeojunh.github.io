@@ -3,7 +3,7 @@
   --muted: var(--ink);
   --art: #ffffff;
   --sky: #c5e1f4;
-  --text-size: 13px;
+  --text-size: 14px;
   position: relative;
   isolation: isolate;
   min-height: 100svh;
@@ -88,7 +88,7 @@
 .content {
   position: relative;
   z-index: 1;
-  width: min(530px, calc(100% - 56px));
+  width: min(620px, calc(100% - 56px));
   margin: 0 auto;
 }
 
@@ -130,7 +130,7 @@
 
 .content dl > div {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) 19ch;
   column-gap: 24px;
   margin: 0 0 19px;
 }
@@ -138,6 +138,19 @@
 .content dt { margin: 0; }
 .content dd { margin: 0; color: var(--muted); }
 .content dd + dd { grid-column: 1 / -1; }
+.content dd ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 4px 0 0;
+}
+.content dd li { margin: 0; }
+.content .experienceGroup > dt,
+.content .experienceGroup > dd { grid-column: 1 / -1; }
+.content .experienceGroup > dd { padding: 4px 0 0 1.4em; }
+.content .experienceGroup dl > div { margin: 0; }
+.content .experienceGroup dl dt { display: list-item; list-style: disc; }
+.content dd li::marker,
+.content .experienceGroup dl dt::marker { content: "- "; }
 .content footer { display: flex; flex-wrap: wrap; gap: 25px; padding: 0 0 70px; }
 
 .content button {

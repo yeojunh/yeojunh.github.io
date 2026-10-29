@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   description:
     "Yeojun Han. Software Engineer II working on AI tooling at Microsoft.",
   icons: {
-    icon: "/assets/website-icon.png",
+    icon: [
+      { url: "/assets/website-icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/assets/website-icon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
     apple: "/assets/website-icon.png",
   },
 };
