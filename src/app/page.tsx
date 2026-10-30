@@ -24,7 +24,7 @@ export default function Home() {
         </p>
         <p>
           I graduated from UBC in 2025 with a B.Sc. in Computer Science with Distinction. 
-          Along the way, I helped organize the sixth iteration of cmd-f hackathon with nwPlus for over 200 underrepresented students, held finance and marketing roles with UBC Women in Computer Science, and held an internal executive role in the Undergraduate Statistics Society. 
+          Along the way, I helped organize the sixth iteration of <span style={{ whiteSpace: "nowrap" }}>cmd-f</span> hackathon with nwPlus for over 200 underrepresented students, held finance and marketing roles with UBC Women in Computer Science, and held an internal executive role in the Undergraduate Statistics Society. 
         </p>
         <p>
           I received the Bit Quill Women in Computer Science Award in 2023 and 2025, and the Community Service Award in 2024. 
@@ -46,7 +46,7 @@ export default function Home() {
             <a href="https://github.com/emmahuang03/trash-identifier" target="_blank" rel="noopener noreferrer">
               WAiSTE
             </a>
-            <p>First place at the Microsoft Intern Hackathon. Point, identify, and sort with your phone camera.</p>
+            <p>First place at the Microsoft Intern Hackathon. Point, identify, and sort waste with your phone camera.</p>
           </li>
           <li>
             <a href="https://github.com/yeojunh/amplifAI" target="_blank" rel="noopener noreferrer">
